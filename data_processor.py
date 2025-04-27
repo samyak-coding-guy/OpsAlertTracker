@@ -51,7 +51,7 @@ def process_alerts(alert_details: List[List[Dict[str, Any]]]) -> pd.DataFrame:
             'Acknowledged At': format_timestamp(alert.get('report', {}).get('ackTime', ''), alert.get('createdAt', '')) if isinstance(alert.get('report'), dict) else '',
             'Acknowledged via': '',
             'Current Owner': '',
-            'Assign Ownership To': '',
+            'Assigned Ownership To': '',
             'Assigned At': '',
             'Closed By': alert.get('report', {}).get('closedBy', '') if isinstance(alert.get('report'), dict) else '',
             'Closed At': format_timestamp(alert.get('report', {}).get('closeTime', ''), alert.get('createdAt', '')) if isinstance(alert.get('report'), dict) else '',
