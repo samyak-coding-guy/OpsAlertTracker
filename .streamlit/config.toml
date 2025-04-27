@@ -1,4 +1,5 @@
 [server]
 headless = true
-address = "localhost"
-port = 5000
+address = "0.0.0.0"
+# Use an environment variable for the port to make it flexible for both local and production
+port = $PORT
