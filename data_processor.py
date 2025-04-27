@@ -72,7 +72,7 @@ def process_alerts(alert_details: List[List[Dict[str, Any]]]) -> pd.DataFrame:
         'Alert ID', 'Alert Title', 'Status', 'Priority',
         'Created At',
         'Acknowledged By', 'Acknowledged At', 'Acknowledged via', 'Current Owner',
-        'Assign Ownership To', 'Assigned At',
+        'Assigned Ownership To', 'Assigned At',
         'Closed By', 'Closed At',
         'Source', 'Integration'
     ]
