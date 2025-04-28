@@ -49,7 +49,6 @@ def process_alerts(alert_details: List[List[Dict[str, Any]]]) -> pd.DataFrame:
             'Source':  alert.get('source', ''),
             'Acknowledged By': alert.get('report', {}).get('acknowledgedBy', '') if isinstance(alert.get('report'), dict) else '',
             'Acknowledged At': format_timestamp(alert.get('report', {}).get('ackTime', ''), alert.get('createdAt', '')) if isinstance(alert.get('report'), dict) else '',
-            'Acknowledged via': '',
             'Current Owner': '',
             'Assigned Ownership To': '',
             'Assigned At': '',
@@ -71,7 +70,7 @@ def process_alerts(alert_details: List[List[Dict[str, Any]]]) -> pd.DataFrame:
     column_order = [
         'Alert ID', 'Alert Title', 'Status', 'Priority',
         'Created At',
-        'Acknowledged By', 'Acknowledged At', 'Acknowledged via', 'Current Owner',
+        'Acknowledged By', 'Acknowledged At', 'Current Owner',
         'Assigned Ownership To', 'Assigned At',
         'Closed By', 'Closed At',
         'Source', 'Integration'
